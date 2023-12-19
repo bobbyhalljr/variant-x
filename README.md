@@ -127,8 +127,9 @@ const YourComponent: React.FC<{ color: string; size: string }> = ({ color, size 
 };
 ```
 
-## Examples
-### Example Component
+# Examples
+
+## Example Component
 Here's an example of how you can use VariantX in a React component.
 
 ```tsx
@@ -162,8 +163,9 @@ const config: VariantConfig = {
 };
 ```
 
-## Advanced Usage
-### Custom Utilities
+# Advanced Usage
+
+## Custom Utilities
 VariantX supports the addition of custom utilities for more flexibility.
 
 ```tsx
@@ -178,7 +180,7 @@ const config: VariantConfig = {
 
 # More Examples ...
 
-### Applying Dynamic Styles to a Button
+## Applying Dynamic Styles to a Button
 
 ```tsx
 // CustomButton.tsx
@@ -202,7 +204,7 @@ export default CustomButton;
 ```
 
 
-### Extenting Styles for a Card Component
+## Extenting Styles for a Card Component
 
 ```tsx
 // CardComponent.tsx
@@ -261,4 +263,4 @@ If you would like to contribute to the VariantX system, please follow our [contr
 ## License
 This project is licensed under the [MIT License]().
 
-#### ** Please note that the paths for `variantx-config.ts`, `example-usage.tsx`, and `example-component.tsx` are placeholders. Make sure to adjust them based on your project structure.**
+**Please note that the paths for `variantx-config.ts`, `example-usage.tsx`, and `example-component.tsx` are placeholders. Make sure to adjust them based on your project structure.**
