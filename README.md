@@ -202,7 +202,7 @@ export default CustomButton;
 ```
 
 
-## Extenting Styles for a Card Component
+## Applying Dynamic Styles to a Card Component
 
 ```tsx
 // CardComponent.tsx
@@ -225,7 +225,7 @@ const CardComponent: React.FC<{ color: string; size: string }> = ({ color, size 
 export default CardComponent;
 ```
 
-## Extending Styles for a Navigation Bar
+## Applying Dynamic Styles to a Navigation Bar
 
 ```tsx
 // Navbar.tsx
