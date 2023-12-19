@@ -49,6 +49,7 @@ The first step is to create a configuration object that defines the base styles,
 <details>
   <summary>Click to view full configuration file</summary>
 
+
 ```tsx
 // variantx-config.ts
 import { vx, VariantConfig } from 'variantx';
@@ -90,12 +91,144 @@ export { config };
 </details>
 <!-- end of drop down -->
 
+### The `variantx-config.ts` file
+
+The `variantx-config.ts` file holds the configuration for the `variantx` utility. This configuration file allows you to define various aspects of how the utility generates Tailwind CSS class names for your components. Let's break down the different sections of the configuration:
+
+### Base Configuration
+- `base`: Specifies the base class name that will be applied to all instances of the component.
+
+### Variant Definitions
+- `variants`: Defines various variants and their corresponding styles. Each variant can have multiple values, and you can use these values in your components to dynamically apply styles.
+
+### Compound Variants
+- `compoundVariants`: Allows you to define compound variants, which are combinations of multiple variants that trigger a specific style.
+
+### Default Variants
+- `defaultVariants`: Sets default values for certain variants. If a component doesn't provide a value for a particular variant, the default value is applied.
+
+### Media Queries
+- `mediaQueries`: Defines styles for different media query breakpoints. The styles inside a media query will be applied based on the screen size.
+
+### Global Styles
+- `globalStyles`: Specifies global styles that will be applied to all instances of the component.
+
+### Custom Utilities
+- `customUtilities`: Enables you to define custom Tailwind CSS utilities. Each utility is associated with a specific style.
+
+### Usage
+Once you have this configuration, you can use it with the `variantx` utility to generate Tailwind CSS class names dynamically based on the provided options. 
+
+## For example:
+
+Let's create a simple example to illustrate how you might use the `variantx` utility with a configuration file.
+
+### Example: Button Component
+
+Let's say you want to create a reusable button component with dynamic styles based on different variants.
+
+#### `variantx-config.ts`
+
+```tsx
+// variantx-config.ts
+import { vx, VariantConfig } from 'variantx';
+
+const config: VariantConfig = {
+  base: 'px-4 py-2 rounded-md font-medium',
+  variants: {
+    color: {
+      primary: 'bg-blue-500 text-white',
+      secondary: 'bg-gray-300 text-gray-700',
+    },
+    size: {
+      small: 'text-sm',
+      large: 'text-lg',
+    },
+  },
+  compoundVariants: [
+    {
+      color: 'primary',
+      size: 'large',
+      class: 'hover:bg-blue-600',
+    },
+    {
+      color: 'secondary',
+      size: 'small',
+      class: 'hover:bg-gray-400',
+    },
+  ],
+  defaultVariants: {
+    color: 'primary',
+    size: 'medium',
+  },
+};
+
+export { config };
+```
+
+#### `Button.tsx`
+
+```tsx
+// Button.tsx
+import React from 'react';
+import { config } from './variantx-config';
+import { vx } from 'variantx';
+
+const generateClass = vx(config);
+
+interface ButtonProps {
+  color?: 'primary' | 'secondary';
+  size?: 'small' | 'medium' | 'large';
+  onClick?: () => void;
+  children: React.ReactNode;
+}
+
+const Button: React.FC<ButtonProps> = ({ color, size, onClick, children }) => {
+  // Use the generated class based on the provided props
+  const className = generateClass({ color, size });
+
+  return (
+    <button className={className} onClick={onClick}>
+      {children}
+    </button>
+  );
+};
+
+export default Button;
+```
+
+Now, when you use the `Button` component, you can pass `color` and `size` props to dynamically generate the appropriate styles based on your configuration.
+
+```tsx
+// Example usage
+import React from 'react';
+import Button from './Button';
+
+const App: React.FC = () => {
+  return (
+    <div>
+      <Button>Default Button</Button>
+      <Button color="secondary">Secondary Button</Button>
+      <Button size="large" onClick={() => console.log('Button clicked!')}>
+        Large Button
+      </Button>
+    </div>
+  );
+};
+
+export default App;
+```
+
+This way, you can easily customize the appearance of the `Button` component by adjusting the `color` and `size` props, and the styles will be generated dynamically based on the `variantx` configuration.
+
+This way, the `variantx` utility simplifies the process of dynamically applying styles to components, making your styling more flexible and maintainable.
+
 ## Using the `vx` Function
 The `vx` function is used to dynamically generate Tailwind CSS class names based on the provided configuration.
 
 ```tsx
 // example-usage.tsx
-import { vx } from 'tailwind-variants';
+import { vx } from 'variantx';
 import { config } from './variantx-config';
 
 const generateClass = vx(config);
@@ -111,7 +244,7 @@ The `useVariantX` hook simplifies the usage of VariantX in React components.
 ```tsx
 // example-component.tsx 
 import React from 'react';
-import { useVariantX } from 'tailwind-variants';
+import { useVariantX } from 'variantx';
 import { config } from './variantx-config';
 
 const YourComponent: React.FC<{ color: string; size: string }> = ({ color, size }) => {
@@ -132,7 +265,7 @@ Here's an example of how you can use VariantX in a React component.
 
 ```tsx
 // Example usage of VariantX in a React component
-import { useVariantX } from 'tailwind-variants';
+import { useVariantX } from 'variantx';
 import { config } from './variantx-config';
 
 const YourComponent: React.FC<{ color: string; size: string }> = ({ color, size }) => {
@@ -207,7 +340,7 @@ export default CustomButton;
 ```tsx
 // CardComponent.tsx
 import React from 'react';
-import { useVariantX } from 'tailwind-variants';
+import { useVariantX } from 'variantx';
 import { config as cardConfig } from './variantx-config';
 
 const CardComponent: React.FC<{ color: string; size: string }> = ({ color, size }) => {
@@ -230,17 +363,17 @@ export default CardComponent;
 ```tsx
 // Navbar.tsx
 import React from 'react';
-import { useVariantX } from 'tailwind-variants';
+import { useVariantX } from 'variantx';
 import { config as navbarConfig } from './variantx-config';
 
-const Navbar: React.FC<{ theme: string }> = ({ theme }) => {
+const Navbar: React.FC<{ color: string }> = ({ color }) => {
   // Use the VariantX hook with the navbar configuration
   const { dynamicClass, updateDynamicClass } = useVariantX(navbarConfig);
 
   React.useEffect(() => {
-    // Update the dynamic class based on the provided theme
-    updateDynamicClass({ theme });
-  }, [theme]);
+    // Update the dynamic class based on the provided color
+    updateDynamicClass({ color });
+  }, [color]);
 
   return <nav className={dynamicClass}>Navbar content goes here</nav>;
 };
