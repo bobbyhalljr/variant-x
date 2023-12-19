@@ -1,10 +1,10 @@
 # VariantX Documentation 
 
-## Created by: [TM-UI](https://linkedin.com/in/bobbyhalljr)
+## Created by: [TM-UI]()
 
 ## Introduction
 
-Welcome to the VariantX documentation! VariantX is a utility for dynamically generating Tailwind CSS class names based on a provided configuration. This documentation will guide you through its features, usage, and integration. Created by [tm-ui](https://linkedin.com/in/bobbyhalljr)
+Welcome to the VariantX documentation! VariantX is a utility for dynamically generating Tailwind CSS class names based on a provided configuration. This documentation will guide you through its features, usage, and integration. Created by [tm-ui]()
 
 ## Table of Contents
 
