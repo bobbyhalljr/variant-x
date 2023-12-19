@@ -1,8 +1,23 @@
+![VariantX Logo](/public/banner-light.png)
+
 # VariantX Documentation 
+VariantX has no affilation with Tailwindcss
 
 ## Introduction
 
 Welcome to the VariantX documentation! VariantX is a utility for dynamically generating Tailwind CSS class names based on a provided configuration. This documentation will guide you through its features, usage, and integration. Created by [Bobby Hall Jr](https://linkedin.com/in/bobbyhalljr), also the creator of [TM-UI](https://instagram.com/tomorrows_ui)
+
+## What problem does this tool solve ? 🤷🏽‍♂️
+
+`VariantX` simplifies and organizes the process of dynamically generating Tailwind CSS class names, offering a flexible and reusable approach for styling components with support for variants, media queries, global styles, and custom utilities.
+
+## Use Cases
+
+1. **Component Styling**: Developers can use `variantx` to easily manage and apply dynamic styles to React components, reducing the complexity of styling variations and ensuring consistency.
+
+2. **Theme Customization**: It's useful for creating dynamic and customizable themes in React applications, allowing developers to effortlessly change colors, sizes, and other styles.
+
+3. **Responsive Design**: `variantx` supports media queries, making it valuable for creating responsive designs by adapting component styles based on different screen sizes or device types.
 
 ## Table of Contents
 
