@@ -95,7 +95,7 @@ export { config };
 ## Using the `vx` Function
 The `vx` function is used to dynamically generate Tailwind CSS class names based on the provided configuration.
 
-```
+```tsx
 // example-usage.tsx
 import { vx } from 'tailwind-variants';
 import { config } from './variantx-config';
@@ -110,7 +110,7 @@ const dynamicClass = generateClass({
 ## Using the useVariantX Hook
 The `useVariantX` hook simplifies the usage of VariantX in React components.
 
-```
+```tsx
 // example-component.tsx 
 import React from 'react';
 import { useVariantX } from 'tailwind-variants';
@@ -131,7 +131,7 @@ const YourComponent: React.FC<{ color: string; size: string }> = ({ color, size 
 ### Example Component
 Here's an example of how you can use VariantX in a React component.
 
-```
+```tsx
 // Example usage of VariantX in a React component
 import { useVariantX } from 'tailwind-variants';
 import { config } from './variantx-config';
@@ -150,7 +150,7 @@ const YourComponent: React.FC<{ color: string; size: string }> = ({ color, size 
 ## Media Queries and Global Styles
 You can also include media queries and global styles in your configuration.
 
-```
+```tsx
 // Example media queries and global styles in the configuration
 const config: VariantConfig = {
   base: 'text-base p-4',
@@ -166,7 +166,7 @@ const config: VariantConfig = {
 ### Custom Utilities
 VariantX supports the addition of custom utilities for more flexibility.
 
-```
+```tsx
 // Example custom utilities in the configuration
 const config: VariantConfig = {
   customUtilities: {
@@ -180,7 +180,7 @@ const config: VariantConfig = {
 
 ### Applying Dynamic Styles to a Button
 
-```
+```tsx
 // CustomButton.tsx
 import React from 'react';
 import { useVariantX } from 'variantx';
@@ -204,7 +204,7 @@ export default CustomButton;
 
 ### Extenting Styles for a Card Component
 
-```
+```tsx
 // CardComponent.tsx
 import React from 'react';
 import { useVariantX } from 'tailwind-variants';
@@ -227,7 +227,7 @@ export default CardComponent;
 
 ## Extending Styles for a Navigation Bar
 
-```
+```tsx
 // Navbar.tsx
 import React from 'react';
 import { useVariantX } from 'tailwind-variants';
