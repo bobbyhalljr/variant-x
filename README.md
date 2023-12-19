@@ -1,4 +1,4 @@
-![VariantX Logo](/public/banner-light.png)
+![VariantX Logo](/public/banner-light.png?raw=true)
 
 # VariantX Documentation 
 VariantX has no affilation with Tailwindcss
