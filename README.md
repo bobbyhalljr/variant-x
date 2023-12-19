@@ -1,10 +1,8 @@
 # VariantX Documentation 
 
-## Created by: [TM-UI](https://linkedin.com/in/bobbyhalljr)
-
 ## Introduction
 
-Welcome to the VariantX documentation! VariantX is a utility for dynamically generating Tailwind CSS class names based on a provided configuration. This documentation will guide you through its features, usage, and integration. Created by [tm-ui](https://linkedin.com/in/bobbyhalljr)
+Welcome to the VariantX documentation! VariantX is a utility for dynamically generating Tailwind CSS class names based on a provided configuration. This documentation will guide you through its features, usage, and integration. Created by [Bobby Hall Jr](https://linkedin.com/in/bobbyhalljr), also the creator of [TM-UI](https://instagram.com/tomorrows_ui)
 
 ## Table of Contents
 
@@ -253,14 +251,19 @@ export default Navbar;
 ## Customizing the Configuration
 The configuration (`variantx-config.ts`) can be customized based on your project's specific styling needs. You can define variants for colors, sizes, compound variants, media queries, global styles, and custom utilities.
 
-For more advanced use cases and examples, refer to the [VariantX GitHub repository]().
+For more advanced use cases and examples, refer to the [VariantX GitHub repository](https://github.com/bobbyhalljr/variantx).
 
 Feel free to explore and experiment with the VariantX system to streamline your styling workflow and maintain a consistent design language throughout your application.
 
 ## Contributing
-If you would like to contribute to the VariantX system, please follow our [contribution guidelines]().
+If you would like to contribute to the VariantX system, please follow our [contribution guidelines](#CONTRIBUTION-md).
 
 ## License
-This project is licensed under the [MIT License]().
+This project is licensed under VariantX © 2023 by Bobby Hall Jr is licensed under CC BY 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
 
+This license requires that reusers give credit to the [creator](https://www.linkedin.com/in/bobbyhalljr). It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, even for commercial purposes.
+
+VariantX © 2023 by Bobby Hall Jr is licensed under CC BY 4.0 
+
+### Note:
 **Please note that the paths for `variantx-config.ts`, `example-usage.tsx`, and `example-component.tsx` are placeholders. Make sure to adjust them based on your project structure.**
