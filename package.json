@@ -2,7 +2,7 @@
   "name": "variantx",
   "author": "Bobby Hall Jr",
   "types": "./types/variantx.d.ts",
-  "version": "0.4.12",
+  "version": "0.4.13",
   "private": false,
   "keywords": [
     "tailwindcss",
