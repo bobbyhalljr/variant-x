@@ -2,7 +2,7 @@
   "name": "variantx",
   "author": "Bobby Hall Jr",
   "types": "./types/variantx.d.ts",
-  "version": "0.4.15",
+  "version": "0.4.16",
   "private": false,
   "main": "./src/variantx.ts",
   "keywords": [
