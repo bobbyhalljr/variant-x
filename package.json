@@ -4,6 +4,7 @@
   "types": "./types/variantx.d.ts",
   "version": "0.4.14",
   "private": false,
+  "main": "./src/pages/index.tsx",
   "keywords": [
     "tailwindcss",
     "variant",
