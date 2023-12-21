@@ -39,7 +39,7 @@
 import { useEffect, useState } from 'react';
 import { vx, VariantConfig } from './variantx';
 
-export const useVariantX = (config: VariantConfig) => {
+const useVariantX = (config: VariantConfig) => {
   const [dynamicClass, setDynamicClass] = useState<string>('');
 
   useEffect(() => {
@@ -54,3 +54,5 @@ export const useVariantX = (config: VariantConfig) => {
 
   return { dynamicClass, updateDynamicClass };
 };
+
+export { useVariantX }

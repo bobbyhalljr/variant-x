@@ -19,7 +19,7 @@ export type VariantConfig = {
   customUtilities?: Record<string, string>;
 };
 
-export const vx = (config: VariantConfig) => {
+const vx = (config: VariantConfig) => {
   const {
     base = '',
     variants = {},
@@ -70,3 +70,5 @@ export const vx = (config: VariantConfig) => {
     return result.trim();
   };
 };
+
+export { vx }
